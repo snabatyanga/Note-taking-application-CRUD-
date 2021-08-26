@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+	<head>
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		<meta content="utf-8" http-equiv="encoding">
+		<style>
+			body {background="purple";}
+			.topnav {
+			  background-color: #333;
+			  overflow: hidden;
+			}
+
+			/* Style the links inside the navigation bar */
+			.topnav a {
+			  float: left;
+			  color: #f2f2f2;
+			  text-align: center;
+			  padding: 14px 16px;
+			  text-decoration: none;
+			  font-size: 17px;
+			}
+
+			/* Change the color of links on hover */
+			.topnav a:hover {
+			  background-color: #ddd;
+			  color: black;
+			}
+
+			/* Add a color to the active/current link */
+			.topnav a.active {
+			  background-color: #04AA6D;
+			  color: white;
+			}
+		</style>
+	 	<title>Create Notes</title>
+	</head>
+	<body>
+		<h1>Notes Interface</h1>
+		<h4>Create, Edit, delete and find notes</h4>
+		<div class="topnav">
+			<a href="http://localhost:3000">Home</a>
+		  	<a class="active" href="http://localhost:3000/create">Create Notes</a>
+		  	<a href="http://localhost:3000/view">Find All Notes</a>
+			<a href="http://localhost:3000/search">Find one</a>
+		</div>
+		<h4>Create new note</h4>
+		<form method="post" action="http://localhost:3000/notes" style="border: solid 1px;padding: 10px;text-align: center;width: 200px;margin: 0 auto;">
+		  	<label for="title">Title:</label><br>
+		  	<input type="text" id="title" name="title"><br>
+		  	<label for="content">Content:</label><br>
+		  	<input type="text" id="content" name="content"><br><br>
+		  	<input type="submit" value="Save">
+		</form> 
+	</body>
+</html>
